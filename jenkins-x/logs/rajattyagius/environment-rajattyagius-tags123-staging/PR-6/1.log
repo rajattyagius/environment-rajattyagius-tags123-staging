@@ -1,0 +1,81 @@
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-pd6zw[0m
+{"level":"warn","ts":1568723224.584108,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723224.5847487,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-9ktcw[0m
+{"level":"warn","ts":1568723225.969002,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568723225.9991016,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-rajattyagius-environment-r-fsl7h[0m
+{"level":"warn","ts":1568723231.8320684,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723234.3057537,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/environment-************-tags123-staging.git @ ae9f8fdf9072979332ea6fd03fcb203ba4675c69 in path /workspace/source"}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:ae9f8fdf9072979332ea6fd03fcb203ba4675c69,6:daf3705b87c36852991098336dfcc39244db92b5
+DEBUG: ran git fetch --unshallow origin daf3705b87c36852991098336dfcc39244db92b5: ae9f8fdf9072979332ea6fd03fcb203ba4675c69: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard ae9f8fdf9072979332ea6fd03fcb203ba4675c69 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge daf3705b87c36852991098336dfcc39244db92b5 in 
+Merged SHA daf3705b87c36852991098336dfcc39244db92b5 with commit message 'chore: Promote pa-emailparser to version 0.0.15' into base branch master
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin daf3705b87c36852991098336dfcc39244db92b5: ae9f8fdf9072979332ea6fd03fcb203ba4675c69: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard ae9f8fdf9072979332ea6fd03fcb203ba4675c69 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge daf3705b87c36852991098336dfcc39244db92b5 in 
+Merged SHA daf3705b87c36852991098336dfcc39244db92b5 with commit message 'chore: Promote pa-emailparser to version 0.0.15' into base branch master
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-build-effective.yml
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for ************-environment-************-tags123-staging-PR-6-1
+Applying changes 
+upserted PipelineResource ************-environment-rajatt for the git repository https://github.com/************/environment-************-tags123-staging.git
+upserted Task ************-environment-rajatt-vrc5t-from-build-pack-1
+upserted Pipeline ************-environment-rajatt-vrc5t-1
+created PipelineRun ************-environment-rajatt-vrc5t-1
+created PipelineStructure ************-environment-rajatt-vrc5t-1
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-t5nzc[0m
+{"level":"warn","ts":1568723261.9550989,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723261.9556148,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mphtw[0m
+{"level":"warn","ts":1568723262.4835606,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568723262.484743,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-rajattyagius-environment-rajatt-fx5dx[0m
+{"level":"warn","ts":1568723268.5028973,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723270.4331367,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/environment-************-tags123-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:ae9f8fdf9072979332ea6fd03fcb203ba4675c69,6:daf3705b87c36852991098336dfcc39244db92b5
+DEBUG: ran git fetch origin daf3705b87c36852991098336dfcc39244db92b5: ae9f8fdf9072979332ea6fd03fcb203ba4675c69: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard ae9f8fdf9072979332ea6fd03fcb203ba4675c69 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge daf3705b87c36852991098336dfcc39244db92b5 in 
+Merged SHA daf3705b87c36852991098336dfcc39244db92b5 with commit message 'chore: Promote pa-emailparser to version 0.0.15' into base branch master
+
+Showing logs for build [32mrajattyagius-environment-rajatt-vrc5t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
