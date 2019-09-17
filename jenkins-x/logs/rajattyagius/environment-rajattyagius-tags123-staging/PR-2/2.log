@@ -1,0 +1,28 @@
+
+Showing logs for build [32mmeta-rajattyagius-environment-r-zzb4w-2[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-2x242[0m
+{"level":"warn","ts":1568711534.7092247,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568711534.7099156,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-rajattyagius-environment-r-zzb4w-2[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-wqst4[0m
+{"level":"warn","ts":1568711535.175221,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568711535.178196,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-rajattyagius-environment-r-zzb4w-2[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-rajattyagius-environment-r-zzb4w-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-rajattyagius-environment-r-kw64w[0m
+{"level":"warn","ts":1568711542.6702807,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568711544.9869866,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/environment-************-tags123-staging.git @ ae9f8fdf9072979332ea6fd03fcb203ba4675c69 in path /workspace/source"}
+
+Showing logs for build [32mmeta-rajattyagius-environment-r-zzb4w-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:ae9f8fdf9072979332ea6fd03fcb203ba4675c69,2:d4991323e07f96b789d0fbc723f6252282733394
+DEBUG: ran git fetch --unshallow origin d4991323e07f96b789d0fbc723f6252282733394: ae9f8fdf9072979332ea6fd03fcb203ba4675c69: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard ae9f8fdf9072979332ea6fd03fcb203ba4675c69 in 
+DEBUG: ran clean --force -d . in 
+error: error during merge: merging d4991323e07f96b789d0fbc723f6252282733394 into master: git output: Auto-merging env/requirements.yaml
+CONFLICT (content): Merge conflict in env/requirements.yaml
+Automatic merge failed; fix conflicts and then commit the result.: failed to run 'git merge d4991323e07f96b789d0fbc723f6252282733394' command in directory '', output: 'Auto-merging env/requirements.yaml
+CONFLICT (content): Merge conflict in env/requirements.yaml
+Automatic merge failed; fix conflicts and then commit the result.'
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-git-merge'. The execution of the pipeline has stopped.[0m
