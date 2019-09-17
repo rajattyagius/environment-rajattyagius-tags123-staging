@@ -1,0 +1,109 @@
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-c96x4[0m
+{"level":"warn","ts":1568723608.6348476,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723608.636684,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-bl89v[0m
+{"level":"warn","ts":1568723608.99223,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568723608.9945943,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-rajattyagius-environment-r-ddv76[0m
+{"level":"warn","ts":1568723615.0116189,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723617.1854827,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/environment-************-tags123-staging.git @ f5a268c72b8abc73faaceca97510b0b8f875c9fa in path /workspace/source"}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f5a268c72b8abc73faaceca97510b0b8f875c9fa
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-effective.yml
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.6 and written to file: ./VERSION
+Tag v0.0.6 created and pushed to remote origin
+
+PipelineActivity for ************-environment-************-tags123-staging-master-6
+Applying changes 
+upserted PipelineResource ************-environment-rajatt for the git repository https://github.com/************/environment-************-tags123-staging.git
+upserted Task ************-environment-rajatt-9mvdt-from-build-pack-6
+upserted Pipeline ************-environment-rajatt-9mvdt-6
+created PipelineRun ************-environment-rajatt-9mvdt-6
+created PipelineStructure ************-environment-rajatt-9mvdt-6
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-bnrsn[0m
+{"level":"warn","ts":1568723640.0117059,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723640.0143614,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-h2psc[0m
+{"level":"warn","ts":1568723640.823466,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568723640.8638196,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-rajattyagius-environment-rajatt-krzrw[0m
+{"level":"warn","ts":1568723721.975917,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568723724.4467123,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/environment-************-tags123-staging.git @ v0.0.6 in path /workspace/source"}
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f5a268c72b8abc73faaceca97510b0b8f875c9fa
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mrajattyagius-environment-rajatt-9mvdt-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 6
+Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/**-helm-apply-788672869/env
+Applying helm chart at /tmp/**-helm-apply-788672869/env as release name ** to namespace **-staging
+verifying the helm requirements versions in dir: . using version stream URL:  and git ref: 
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Ignoring templates/.gitignore
+Wrote chart values.yaml /tmp/**-helm-apply-788672869/env/values.yaml generated from directory tree
+generated helm /tmp/**-helm-apply-788672869/env/values.yaml
+
+PipelineSecrets: {}
+cleanup:
+  Annotations:
+    helm.sh/hook: pre-delete
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --cleanup
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --v
+  - 4
+  config:
+    domain: 35.244.49.91.nip.io
+    exposer: Ingress
+    http: "true"
+jenkins:
+  Servers:
+    Global: {}
+prow: {}
+
+Using values files: /tmp/**-helm-apply-788672869/env/values.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Applying Apps chart overrides
+Applying chart overrides
+
+
