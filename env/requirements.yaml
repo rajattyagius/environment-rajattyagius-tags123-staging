@@ -16,3 +16,6 @@ dependencies:
 - name: pa-nattydate
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.1.12
+- name: pa-recurrent-nattydatetime
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.15
