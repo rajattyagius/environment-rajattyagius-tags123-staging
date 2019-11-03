@@ -13,9 +13,11 @@ expose:
   - --v
   - 4
   config:
-    domain: 35.244.49.91.nip.io
+    domain: 35.200.253.211.nip.io
     exposer: Ingress
     http: "true"
+    tlsacme: "false"
+    urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
 jenkins:
   Servers:
     Global: {}
