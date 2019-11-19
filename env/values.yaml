@@ -13,11 +13,13 @@ expose:
   - --v
   - 4
   config:
-    domain: jxbootproject.tagscloud.org
+    domain: tagscloud.org
     exposer: Ingress
-    http: "true"
-    tlsacme: "false"
+    http: "false"
+    tlsSecretName: tls-tagscloud.org-p
+    tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
+  production: true
 jenkins:
   Servers:
     Global: {}
